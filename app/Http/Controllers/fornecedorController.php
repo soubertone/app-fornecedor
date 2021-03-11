@@ -36,9 +36,11 @@ class FornecedorController extends Controller
         $fornecedores->telefone3 = $request->telefone3;
         $fornecedores->telefone4 = $request->telefone4;
 
-        $empresas = Empresas::findOrFail($request->id_empresa);      
+        $empresas = Empresas::findOrFail($request->id_empresa);    
+        
+        
 
-        if($request->nome && $request->telefone && $request->id_empresa && strlen($request->cpf_cnpj) == 14 || strlen($request->cpf_cnpj) == 11){
+        /* if($request->nome && $request->telefone && $request->id_empresa && strlen($request->cpf_cnpj) == 14 || strlen($request->cpf_cnpj) == 11){
             
             $fornecedores->save();
 
@@ -46,7 +48,7 @@ class FornecedorController extends Controller
 
         } else {
         return Redirect('/fornecedores/create')->with('msg_erro', 'Erro ao cadastrar, verifique os campos!');
-        }
+        } */
     }
 
     public function home(){
