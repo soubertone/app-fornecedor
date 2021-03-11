@@ -29,26 +29,33 @@ class FornecedorController extends Controller
         $fornecedores->cpf_cnpj = $request->cpf_cnpj;
         $fornecedores->rg = $request->rg;
         $fornecedores->data_nasc = $request->data_nasc;
+
+        $arr_date = explode('-', $request->data_nasc);
+
         $fornecedores->telefone = $request->telefone;
         $fornecedores->tipo = $request->tipo;
-        $fornecedores->id_empresa = $request->id_empresa;
+
+        $arr = explode('-', $request->id_empresa);
+        $fornecedores->id_empresa = $arr[0];
+
         $fornecedores->telefone2 = $request->telefone2;
         $fornecedores->telefone3 = $request->telefone3;
         $fornecedores->telefone4 = $request->telefone4;
 
-        $empresas = Empresas::findOrFail($request->id_empresa);    
-        
-        
+        if($request->nome && $request->telefone && $request->id_empresa && strlen($request->cpf_cnpj) == 14 || strlen($request->cpf_cnpj) == 11){
+            if($arr[1] == 'PR' && (date('Y') - $arr_date[0]) >= 18){
 
-        /* if($request->nome && $request->telefone && $request->id_empresa && strlen($request->cpf_cnpj) == 14 || strlen($request->cpf_cnpj) == 11){
-            
             $fornecedores->save();
 
             return Redirect('/fornecedores')->with('msg_ok', 'Cadastro criado com sucesso!');
 
         } else {
+            return Redirect('/fornecedores/create')->with('msg_erro', 'Você não pode cadastrar Pessoa Física menor de idade nesta empresa!');
+        }
+
+        } else {
         return Redirect('/fornecedores/create')->with('msg_erro', 'Erro ao cadastrar, verifique os campos!');
-        } */
+        }
     }
 
     public function home(){

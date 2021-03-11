@@ -27,10 +27,10 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label>Selecione a empresa:</label>
-                                    <select class="form-control" name="id_empresa" id="id_empresa" onclick="verifiUf()" required>
+                                    <select class="form-control" name="id_empresa" id="id_empresa" required>
                                         <option value="">Selecione</option>
                                         @foreach ($empresas as $empresa)
-                                        <option value="{{ $empresa->id }}">{{ $empresa->nome_fantasia }}</option>
+                                        <option value="{{ $empresa->id }}-{{ $empresa->uf }}">{{ $empresa->nome_fantasia }}</option>
                                         @endforeach
                                     </select>
                                 </div>

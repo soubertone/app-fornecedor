@@ -134,7 +134,7 @@
 
                         <div class="col-md-6 mt-3">
                             <div class="form-group">
-                                <input type="submit" class="btn btn-success" value="Cadastrar fornecedor">
+                                <input type="submit" class="btn btn-success" value="Editar fornecedor">
                             </div>
                         </div>
 
