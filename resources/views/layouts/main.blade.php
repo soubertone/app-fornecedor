@@ -35,13 +35,7 @@
                         </button>
                         <div class="collapse navbar-collapse" id="navbarID">
                             <div class="navbar-nav">
-                                <a class="nav-link active" aria-current="page" href="/">Home</a>
-                            </div>
-                            <div class="navbar-nav">
-                                <a class="nav-link active" aria-current="page" href="/empresas">Empresas</a>
-                            </div>
-                            <div class="navbar-nav">
-                                <a class="nav-link active" aria-current="page" href="/fornecedores">Fornecedores</a>
+                                <a class="nav-link text-dark" aria-current="page" href="/">Home</a>
                             </div>
                         </div>
                     </div>
