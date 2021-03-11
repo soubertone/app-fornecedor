@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Azul padrão: #11007C */
+/* Vermelho padrão: #5F0808 */
+
+.container-fluid {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    padding: 0 10px;
+}
+
+nav img {
+    width: 75px;
+}
+
+/* Footer */
+/*
+footer {
+    text-align: center;
+    padding: 30px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+} 
+*/
