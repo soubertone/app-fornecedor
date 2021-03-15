@@ -1,7 +1,7 @@
 <h1><b>RestAPI</b></h1> 
 <p>Cadastro de empresa e funcionário</p>
 
-![](sistema_restAPIgif)/![](sistema_restAPI.gif)
+![](sistema_restAPIgif)![](sistema_restAPI.gif)
 
 <p style="font-size:20px"><b>Instalação banco de dados: </b></p>
 <ul>
